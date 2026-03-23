@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ["Domino's", "Kanzen"]
+restaurantes = [{"nome":"Mr. Sam's", "categoria":"Hamburgueria", "ativo":True}, 
+                {"nome":"Kanzen", "categoria":"Japonesa", "ativo":True},
+                {"nome":"Espeto Tião", "categoria":"Salgados", "ativo":False}]
 
 def exibir_nome_programa():
     print("""𝒮𝒶𝒷𝑜𝓇 𝐸𝓍𝓅𝓇𝑒𝓈𝓈
@@ -38,7 +40,10 @@ def cadastrar_restaurante():
 def listar_restaurante():
     exibir_subtitulo("Listando restaurantes...")
     for restaurante in restaurantes:
-        print(f"{restaurante}")
+        nome_restaurante = restaurante["nome"]
+        categoria = restaurante["categoria"]
+        ativo = restaurante["ativo"]
+        print(f"- {nome_restaurante} | {categoria} | {ativo}")
     voltar_menu()
 
 
