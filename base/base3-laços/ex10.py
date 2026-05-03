@@ -8,3 +8,6 @@ while (len(usuario) < 5):
         senha = input("Digite sua senha: ")
 
 print("Cadastro realizado com sucesso!")
+
+for i in senha:
+    print(f"Sua senha tem os seguintes caracteres: {i}")
